@@ -6,20 +6,20 @@ import java.util.ArrayList;
 
 public class GradeBook {
 	
-	private String _test;   // Hold test name
-	private ArrayList<Integer> _listOfScores;  // ArrayList for scores
-	private ArrayList<Character> _grade;       // ArrayList for grades
+	private String test;   // Hold test name
+	private ArrayList<Integer> listOfScores;  // ArrayList for scores
+	private ArrayList<Character> grade;       // ArrayList for grades
 	
 	GradeBook()  // Default no-arg constructor
 	{
-		_test = "";
+		test = "";
 	}
 	
 	GradeBook(String test, ArrayList<Integer> scores)  // Parameterized constructor
 	{
-		_test = test;
-		_listOfScores = scores;
-		_grade = setLetterGrades(scores);
+		this.test = test;
+		this.listOfScores = scores;
+		this.grade = setLetterGrades(scores);
 	}
 	
 	public ArrayList<Character> setLetterGrades(ArrayList<Integer> score)  // setLetterGrades to check score and assign grade
@@ -52,32 +52,32 @@ public class GradeBook {
 	}
 	
 	public String getTest() {  // getter for test
-		return _test;
+		return test;
 	}
 
-	public void setTest(String _test) {  // setter for test
-		this._test = _test;
+	public void setTest(String test) {  // setter for test
+		this.test = test;
 	}
 
 	public ArrayList<Integer> getListOfScores() {  // getter for listOfScores
-		return _listOfScores;
+		return listOfScores;
 	}
 
-	public void setListOfScores(ArrayList<Integer> _listOfScores) {  // setter for listOfScores
-		this._listOfScores = _listOfScores;
+	public void setListOfScores(ArrayList<Integer> listOfScores) {  // setter for listOfScores
+		this.listOfScores = listOfScores;
 	}
 
 	public ArrayList<Character> getGrade() {  // getter for grade
-		return _grade;
+		return grade;
 	}
 
-	public void setGrade(ArrayList<Character> _grade) {  // setter for grade
-		this._grade = _grade;
+	public void setGrade(ArrayList<Character> grade) {  // setter for grade
+		this.grade = grade;
 	}
 
 	@Override
 	public String toString() {  // overridden toString 
-		return "GradeBook [_grade=" + _grade + ", _listOfScores=" + _listOfScores + ", _test=" + _test + "]";
-	}
+		return "GradeBook [grade=" + grade + ", listOfScores=" + listOfScores + ", test=" + test + "]";
 	
+	}
 }
